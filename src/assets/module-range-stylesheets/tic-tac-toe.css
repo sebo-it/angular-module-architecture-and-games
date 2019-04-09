@@ -1,0 +1,52 @@
+/* Class prefix 'ttt-*' is a shortcut of 'Tic-Tac-Toe' */
+
+.game-background{
+  /* Position different than static is needed to center instruction box info */
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: aqua;
+  width: 400px;
+  max-width: 400px;
+  height: 400px;
+  max-height: 400px;
+
+  background: url('../../assets/images/tic-tac-toe/background.png');
+
+}
+
+
+
+@font-face {
+  font-family: 'Russo-One-Regular';
+  src: url(../fonts/tic-tac-toe/RussoOne-Regular.ttf) format('truetype');
+}
+
+.ttt-font{
+  font-family: 'Russo-One-Regular', sans-serif;
+  color: #00274a;
+}
+
+.ttt-button{
+  color:inherit;
+  background-color: #ffce706b;
+  padding: 10px;
+  border: solid 3px #00274a;
+  letter-spacing: 0.025em;
+  z-index: 1;
+}
+
+.ttt-button:hover{
+  cursor:pointer;
+  background-color: #ffcd70c7;
+}
+
+.ttt-button:active{
+  background-color: #ffbe47d3;
+}
+
+a.ttt-button{text-decoration: none;}
+button.ttt-button:focus {outline:0;}

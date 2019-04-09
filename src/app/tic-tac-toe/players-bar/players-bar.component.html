@@ -1,0 +1,11 @@
+<div class="bar-container ttt-font" [ngClass]="{'bigger-font': parentComponent === 'result-screen'}">
+  <span class='player-mark'>{{ player1.mark }}:</span>
+  <span>
+    <span [ngClass]="{'last-winner-animation': winnerMark === player1.mark && parentComponent === 'result-screen'}">{{ player1.winsQuantity }}</span>
+
+    <span> vs </span>
+
+    <span [ngClass]="{'last-winner-animation': winnerMark === player2.mark && parentComponent === 'result-screen'}">{{ player2.winsQuantity }}</span>
+  </span>
+  <span class='player-mark'>:{{ player2.mark }}</span>
+</div>

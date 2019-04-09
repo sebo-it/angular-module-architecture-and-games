@@ -1,0 +1,93 @@
+.start-menu-container{
+
+  background-color: rgba(255, 255, 255, 0.726);
+  width: 350px;
+  height: 350px;
+
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: auto repeat(3, 1fr);
+
+  justify-content: center;
+
+  justify-items: center;
+  align-items: center;
+
+  /* grid-gap: 20px; */
+}
+
+app-instructions{
+  padding: 10px;
+  justify-self: right;
+}
+
+.board-sizes-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'block1 . block2 . block3'
+    ' . block4 . block5 . ';
+}
+
+.board-size-block{
+  /* width: 55px; */
+  /* height: 55px; */
+  background-color: #5cadadab;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.board-size-block:hover{
+  cursor: pointer;
+}
+
+.block1{
+  grid-area: block1;
+}
+
+.block2{
+  grid-area: block2;
+}
+
+.block3{
+  grid-area: block3;
+}
+
+.block4{
+  grid-area: block4;
+}
+
+.block5{
+  grid-area: block5;
+}
+
+.selected{
+  /* border: solid #00274a 3px !important; */
+  background-color: rgba(216, 172, 27, 0.904) !important;
+  /* background-color: #ffbe47d3 !important; */
+}
+
+.marks-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+
+.mark-block{
+  background-color: #5cadadab;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.mark-block:hover{
+  cursor: pointer;
+}
+

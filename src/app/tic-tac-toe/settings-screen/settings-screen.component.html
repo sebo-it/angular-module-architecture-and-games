@@ -1,0 +1,17 @@
+<div class="start-menu-container" @fade>
+  <app-instructions infoContent="settings"></app-instructions>
+  <div class="board-sizes-container">
+    <div class="ttt-font board-size-block block1" (click)='selectBoardSize(3)' [class.selected]="gameSettings.boardSize === 3 ">3x3</div>
+    <div class="ttt-font board-size-block block2" (click)='selectBoardSize(4)' [class.selected]="gameSettings.boardSize === 4 ">4x4</div>
+    <div class="ttt-font board-size-block block3" (click)='selectBoardSize(5)' [class.selected]="gameSettings.boardSize === 5 ">5x5</div>
+    <div class="ttt-font board-size-block block4" (click)='selectBoardSize(6)' [class.selected]="gameSettings.boardSize === 6 ">6x6</div>
+    <div class="ttt-font board-size-block block5" (click)='selectBoardSize(7)' [class.selected]="gameSettings.boardSize === 7 ">7x7</div>
+  </div>
+  <div class='marks-container'>
+    <div class="ttt-font mark-block" (click)="selectMark('O')" [class.selected]="gameSettings.markForFirstPlayer === 'O' ">O</div>
+    <div class="ttt-font mark-block" (click)="selectMark('X')" [class.selected]="gameSettings.markForFirstPlayer === 'X' ">X</div>
+  </div>
+  <!-- <button><a [routerLink]="['../board']">Start</a></button> -->
+  <a class="ttt-font ttt-button" (click)="startButtonHandler()">Play</a>
+
+</div>

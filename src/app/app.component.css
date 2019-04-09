@@ -1,0 +1,18 @@
+.top-bar{
+  width: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo{
+  width: 8rem;
+}
+
+.grid-center{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+

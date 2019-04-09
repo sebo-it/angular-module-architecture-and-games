@@ -1,0 +1,7 @@
+<div class="endGameScreen" @fade>
+  <h1 class="ttt-font result-animation" *ngIf="gameResult !== 'Draw' ">Winner: {{gameResult}}</h1>
+  <h1 class="ttt-font" *ngIf="gameResult === 'Draw' ">{{gameResult}}</h1>
+  <app-players-bar parentComponent="result-screen"></app-players-bar>
+  <a class="ttt-button ttt-font" (click)="nextGameHandler()">Next</a>
+  <a class="ttt-button ttt-font" (click)="newGameHandler()">New game</a>
+</div>

@@ -1,0 +1,12 @@
+.dice{
+  background-color: whitesmoke;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  font-size: 30px;
+}
+
+.lock{
+  background-color: darkgoldenrod;
+}

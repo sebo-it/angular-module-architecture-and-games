@@ -1,0 +1,5 @@
+<div
+  class="dice"
+  (click)='toggleLock()'
+  [ngClass]=" {'lock': dice.block===true} "
+  >{{dice.value}}</div>

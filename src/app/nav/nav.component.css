@@ -1,0 +1,39 @@
+.main-container{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  list-style: none;
+  align-items: center;
+}
+
+.link{
+  width: auto;
+  background-color: #f3f3f3;
+  padding: 10px;
+  color: #2c3e50;
+  border: solid 3px #7f8c8d;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+li:nth-of-type(2){
+  position: relative;
+}
+
+.star{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: orange;
+  font-size: 2rem;
+}
+
+.link:focus{
+  outline: none;
+}
+
+.router-link-active{
+  background-color: #d9dfe2;
+}

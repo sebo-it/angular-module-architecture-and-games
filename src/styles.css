@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #ecf0f1;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.click-not-allowed{
+  cursor:not-allowed !important;
+}

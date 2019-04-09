@@ -1,0 +1,29 @@
+<div class="board-container" @fade>
+
+  <div class="info-row">
+    <button (click)="backURL()" class="back ttt-button ttt-font"><</button>
+    <app-players-bar></app-players-bar>
+    <app-instructions infoContent='board'></app-instructions>
+  </div>
+
+  <app-info-box [isVisible]="occupiedFieldAlertVisible"></app-info-box>
+
+  <canvas #canvas *ngIf='isCanvasInDOM' width='350' height='350'></canvas>
+  <table #boardAsTable class='size-{{gameArray.length}}x{{gameArray.length}}'>
+    <tr *ngFor='let row of gameArray; let i = index'>
+      <td
+        *ngFor='let column of gameArray[i]; let j = index'
+        (click)="selectFieldHandler(i, j)"
+        class="ttt-font row-{{i}} col-{{j}}"
+        [ngClass]="{
+            'color-transition': gameArray[i][j] === '',
+            'clickable': gameArray[i][j] === '',
+            'click-not-allowed': gameArray[i][j] !== ''
+          }"
+
+        appShowPossibleMarkOnHover>{{ gameArray[i][j] }}</td>
+      </tr>
+    </table>
+
+  </div>
+  <!-- 'win-field': arrayWithWinFields[i][j] !== '' -->

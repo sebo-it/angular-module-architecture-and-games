@@ -1,0 +1,84 @@
+<div class="dices-container">
+  <app-dice *ngFor='let dice of dices; let i = index' [(dice)]="dices[i]"></app-dice>
+  <button (click)='throwDice()' [disabled]='!availableThrows'>Throw</button>
+  <span>Available throws: {{availableThrows}}</span>
+  <span>Round: {{ round }} / 26</span>
+</div>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Player1</th>
+    <th>player2</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th (click)="chooseField('ones', possibleResults[0].ones)" [ngClass]="{ possibleValue: players[0].ones === null || 0 }">{{ players[0].ones || possibleResults[0].ones || null }}</th>
+    <th (click)="chooseField('ones', possibleResults[1].ones)" [ngClass]="{ possibleValue: players[1].ones === null || 0 }">{{ players[1].ones || possibleResults[1].ones || null }}</th>
+  </tr>
+  <tr>
+    <th>2</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>3</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>4</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>5</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>6</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Amount + bonus</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>III</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>IV</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>SS</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>BS</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>General</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Chance</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Result</th>
+    <th></th>
+    <th></th>
+  </tr>
+</table>

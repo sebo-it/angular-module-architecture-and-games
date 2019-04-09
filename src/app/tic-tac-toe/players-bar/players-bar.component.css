@@ -1,0 +1,60 @@
+.bar-container{
+  /* display: flex; */
+  /* justify-content: center; */
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  grid-gap: 20px;
+
+  /* background-color: antiquewhite; */
+  padding: 3px 10px 3px 10px;
+  margin: 0 10px 0 10px;
+}
+
+/* .ttt-font{
+  font-size: 30px;
+} */
+
+.player-mark{
+  font-size: 22px;
+}
+
+/* .results{
+  display: grid;
+  align-content: center;
+} */
+
+/* .ttt-font span{
+  width: 30px;
+  height: 40px;
+} */
+
+/* .result-container{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, auto);
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+} */
+
+.bigger-font{
+  font-size: 30px;
+}
+
+.last-winner-animation{
+  display: inline-block;
+  text-align: center;
+  animation: last-winner-animation-keyframes 2s ease-in 0s 1 normal none;
+  /* animation-delay: 1s; */
+}
+
+@keyframes last-winner-animation-keyframes{
+  0% { transform: scale(4); }
+  100% { transform: scale(1); }
+}

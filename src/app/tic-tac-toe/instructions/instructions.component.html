@@ -1,0 +1,40 @@
+<button class="ttt-font ttt-button" (click)='instructionClickHandler()'>i</button>
+
+<div *ngIf="contentIsVisible"
+      [ngSwitch]="infoContent"
+      class="content ttt-font"
+      [ngClass]="{'exit-animation': exitAnimationIsVisible}"
+      @fadeIn>
+
+  <div (click)="instructionExit()" class="exit-button">X</div>
+
+  <!-- Instructions for 'settings-window' -->
+  <ng-container *ngSwitchCase="'settings'">
+    <div class="single-instruction">
+      <h3>{{infoContentObj[infoContent]["board-size-title"]}}</h3>
+      <span> {{infoContentObj[infoContent]["board-size-content"]}}</span>
+    </div>
+
+    <div class="space-above single-instruction">
+      <h3>{{infoContentObj[infoContent]["pawn-title"]}}</h3>
+      <span> {{infoContentObj[infoContent]["pawn-content"]}}</span>
+    </div>
+  </ng-container>
+
+  <!-- Instructions for 'board-window' -->
+  <ng-container *ngSwitchCase="'board'">
+    <div (click)="instructionExit()" class="exit-button">X</div>
+    <div class="single-instruction">
+      <h3>{{infoContentObj[infoContent]["target-title"]}}</h3>
+      <span>{{infoContentObj[infoContent]["target-content"]}}
+        {{infoContentObj[infoContent]["quantityOfMarksToWin"]}}
+        {{infoContentObj[infoContent]["target-content-continue"]}}
+      </span>
+    </div>
+
+    <div class="space-above single-instruction">
+      <h3>{{infoContentObj[infoContent]["game-title"]}}</h3>
+      <span>{{infoContentObj[infoContent]["game"]}}</span>
+    </div>
+  </ng-container>
+</div>
