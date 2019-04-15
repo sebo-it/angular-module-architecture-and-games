@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { DiceGameModule } from './dice-game/dice-game.module';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 // AppRoutingModule should be the last of imports list!
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { DiceGameModule } from './dice-game/dice-game.module';
 
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
