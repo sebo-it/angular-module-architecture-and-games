@@ -1,9 +1,15 @@
 .top-bar{
-  width: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto 1fr;
   align-items: center;
   padding: 2rem;
+}
+
+.description-reminder{
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .logo{

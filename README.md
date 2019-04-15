@@ -11,7 +11,7 @@ Interesting elements:
 	- routing module for feature module,
 - dynamic styles sheets loading with lazy modules (attaching-style-sheets.service.ts),
 - module range style sheet,
-- sessionStorage,
+- sessionStorage (data is store in the browser, so game status won't be lost, when You will use refresh),
 - Angular animations,
 - directive,
 - different sizes of the board,
