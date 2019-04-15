@@ -12,7 +12,7 @@ export class SessionStorageInformationScreenComponent implements OnInit {
   ngOnInit() {
   }
 
-  private reloadPage(): void {
+  reloadPage(): void {
     document.location.reload(true);
   }
 
