@@ -23,6 +23,8 @@ Interesting elements:
 - RxJS,
 - JSON.
 
+I recommend to use, device with screen resolution, bigger than 400px x 400px.
+
 Previous Git history won't be published.
 
 Any feedback is welcome.
