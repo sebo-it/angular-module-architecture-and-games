@@ -21,7 +21,8 @@ Interesting elements:
 - child routes,
 - router guard: canActivate, canActivateChild to detect sessionStorage availability in client browser,
 - RxJS,
-- JSON.
+- JSON,
+- elements of RWD.
 
 I recommend to use, device with screen resolution, bigger than 400px x 400px.
 
